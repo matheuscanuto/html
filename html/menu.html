@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- css of menu-->
+    <!-- you can use any other color of your choice-->
+    <style type="text/css">
+       body{
+              background-color:white;
+
+          }
+   header{
+     background-color: #4f5d80;
+     padding: 10px;
+     display: flex;
+     height: 40px;
+    }
+  .logo{
+   color: white;
+   font-size: 20px;
+    width: 50%;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+.menu{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background-color:#323a52;
+    text-align: center;
+    opacity: 0;
+}
+.show{
+    transition: 1s;opacity: 1;
+
+}
+.hide{
+    opacity: 0;
+}
+.menu a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.icon-menu{
+    width: 50%;
+    text-align: right;
+    color: white;
+    cursor: pointer;
+}
+.icon-menu svg{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+
+}
+
+     
+
+    </style>
+ </head>
+ <body>
+        <header>
+        <div class="logo"><a href="#">any name</a></div>
+        <div class="icon-menu"><i class="fas fa-ellipsis-h"></i></div>
+        <div id="menu"class="menu hide">
+            <a href="#">help</a>
+            <br>
+            <a href="#">contact</a>
+            <br>
+            <a href="#">about</a>
+            <!-- you can write anything else in the "a" tags -->
+             <!--we will do the opening and closing animation of the menu -->
+            <script type="text/javascript">
+            	 var iconMenu=document.querySelectorAll('.icon-menu');
+        iconMenu[0].addEventListener("click",()=>{
+           
+            let menu=document.getElementById("menu");
+            if(menu.classList.contains('hide')){
+            menu.classList.add('show')
+            menu.classList.remove('hide')
+            }else{
+                menu.classList.add('hide')
+            menu.classList.remove('show')
+            }
+
+
+            
+        })
+            </script>
+        </div>
+
+    </header>	
+ </body>
+</html>
